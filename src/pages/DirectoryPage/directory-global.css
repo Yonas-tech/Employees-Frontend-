@@ -22,7 +22,7 @@ body {
   
   .menu a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
     transition: background-color 0.2s ease;
@@ -31,6 +31,7 @@ body {
   .menu a:hover {
     background-color: #eee;
     border: black solid 0.5px;
+    color: #3f3f3f;
   }
   
   .view {

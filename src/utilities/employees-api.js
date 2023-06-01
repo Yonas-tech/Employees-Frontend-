@@ -51,9 +51,7 @@ async function getAll() {
     try {
       const response = await fetch(`${BASE_URL}/employees/${id}`, {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(updatedData)
       });
       if (!response.ok) {
@@ -72,9 +70,7 @@ async function getAll() {
     try {
       const response = await fetch(`${BASE_URL}/employees/${id}`, {
         method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify("")
       });
       if (!response.ok) {
@@ -93,9 +89,7 @@ async function getAll() {
     try {
       const response = await fetch(`${BASE_URL}/employees`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(employee)
       });
       if (!response.ok) {

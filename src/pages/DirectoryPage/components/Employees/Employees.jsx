@@ -61,13 +61,13 @@ function Employees({ employees }) {
           {employees.map((employee) => (
             <tr key={employee.id}>
               <td>{employee.firstName + ' ' + employee.lastName}</td>
-              {/* <td>{employee.photo}</td> */}
+              {/* <td className="photo-cell">{employee.photo}</td> */}
               <td>{employee.position}</td>
               <td>{employee.Email}</td>
               <td>{employee.department}</td>
               <td>{employee.location}</td>
-              <td>
-                <button onClick={() => handleEditClick(employee._id)}>Edit</button>
+              <td className='edit-delete-cell'>
+                <button onClick={() => handleEditClick(employee._id)} className='edit-button'>Edit</button>
                 <button onClick={() => handleDelete(employee._id)} className='delete-button'>Delete</button>
               </td>
             </tr>

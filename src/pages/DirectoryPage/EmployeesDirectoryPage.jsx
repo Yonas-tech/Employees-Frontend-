@@ -37,6 +37,9 @@ export default function EmployeesDirectoryPage({ user, setUser, pexelsClient }) 
     {
       return <Locations employees={employees}/>
     }
+    else{
+      return <Employees employees={employees}/>
+    }
   }
 
   return (
@@ -44,6 +47,7 @@ export default function EmployeesDirectoryPage({ user, setUser, pexelsClient }) 
       <h1>Employees Directory Page</h1>
       <div className='flex-container'>
         <menu className='menu'>
+          <Link to='/'>Dashboard</Link>
           <Link to='/directory/employees'>Employees</Link>
           <Link to='/directory/departments'>Grouped by Department</Link>
           <Link to='/directory/locations'>Grouped by Location</Link>

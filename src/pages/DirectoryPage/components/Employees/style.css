@@ -25,8 +25,12 @@ th {
   border-radius: 50%;
 }
 
-.delete-button {
-  background-color: #f44336;
+.edit-delete-cell {
+
+}
+
+.edit-button {
+  background-color: #3c5c40;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -34,6 +38,21 @@ th {
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.delete-button {
+  background-color: #723b37;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #29a838;
 }
 
 .delete-button:hover {

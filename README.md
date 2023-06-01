@@ -35,4 +35,7 @@ The Employees Directory at the current stage allows users to view and manage emp
 - Grouped by Location: This view groups the employees by their locations and displays them in separate sections or tables.
 
 
+## Resources: 
+
+- 
 

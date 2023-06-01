@@ -35,6 +35,10 @@
   }
   
   .dashboard-button:hover {
-    background-color: #0056b3;
+    /* background-color: #0056b3; */
+    background-color: #eee;
+    border: black solid 0.5px;
+    color: #3f3f3f;
   }
+  
   
