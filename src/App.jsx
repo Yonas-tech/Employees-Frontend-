@@ -12,18 +12,20 @@ function App() {
 
   return (
     <main className="App">
-      <EmployeesDirectoryPage //user = {user}
+      {/* <EmployeesDirectoryPage //user = {user}
           // pexelsClient={pexelsClient} 
-          />
+          /> */}
 
       {/* <NavBar user={user} setUser={setUser} /> */}
-      {/* <Routes>
+      <Routes>
         <Route path="/directory" element={<EmployeesDirectoryPage //user = {user}
-          pexelsClient={pexelsClient} />}/>
-        <Route path="/directory/by/:view" element={<EmployeesDirectoryPage //user = {user}
-          pexelsClient={pexelsClient} />}/>
+          // pexelsClient={pexelsClient} 
+          />} />
+        <Route path="/directory/:view" element={<EmployeesDirectoryPage //user = {user}
+          // pexelsClient={pexelsClient} 
+          />}/>
         <Route path="/directory/edit/:id" element={<EmployeeEditPage />} />
-      </Routes> */}
+      </Routes>
     </main>
 
   );

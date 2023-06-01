@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './directory-global.css'
 import './style.css'
 import Employees from './components/Employees/Employees'
 import Locations from './components/Locations/Locations'
@@ -24,26 +25,41 @@ export default function EmployeesDirectoryPage({ user, setUser, pexelsClient }) 
 
 
   const {view} = useParams();
-
+  function getView(view){
+    if (view==='employees'){
+      return <Employees employees={employees}/>
+    }
+    else if (view==='departments')
+    {
+      return <Departments employees={employees}/>
+    }
+    else if (view==='locations')
+    {
+      return <Locations employees={employees}/>
+    }
+  }
 
   return (
     <div className='page-container'>
       <h1>Employees Directory Page</h1>
       <div className='flex-container'>
-        <menu>
-          <Link to='/employees_view'>Employees</Link>
-          <Link to='/departments'>Grouped by Department</Link>
-          <Link to='/location'>Grouped by Location</Link>
+        <menu className='menu'>
+          <Link to='/directory/employees'>Employees</Link>
+          <Link to='/directory/departments'>Grouped by Department</Link>
+          <Link to='/directory/locations'>Grouped by Location</Link>
         </menu>
         <div className='view'>
-          <Routes>
+
+            {getView(view)}
+
+          {/* <Routes>
             <Route path='/employees_view' element= {<Employees employees={employees}
               pexelsClient={pexelsClient} />}/>
             <Route path='/departments' element= {<Departments employees={employees}
               pexelsClient={pexelsClient}/>}/>
             <Route path='/location' element= {<Locations employees={employees}
               pexelsClient={pexelsClient}/>}/>
-          </Routes>
+          </Routes> */}
         </div>
       </div>
     </div>

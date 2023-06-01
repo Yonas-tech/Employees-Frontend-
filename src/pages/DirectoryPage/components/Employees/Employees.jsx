@@ -1,4 +1,5 @@
 import React from 'react';
+import "./style.css"
 import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 
 function Employees({ employees }) {
@@ -29,7 +30,7 @@ function Employees({ employees }) {
               <td>{employee.firstName + ' ' + employee.lastName}</td>
               {/* <td>{employee.photo}</td> */}
               <td>{employee.position}</td>
-              <td>{employee.email}</td>
+              <td>{employee.Email}</td>
               <td>{employee.department}</td>
               <td>{employee.location}</td>
               {/* <td>

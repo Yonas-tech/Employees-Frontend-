@@ -30,6 +30,7 @@ body {
   
   .menu a:hover {
     background-color: #eee;
+    border: black solid 0.5px;
   }
   
   .view {
