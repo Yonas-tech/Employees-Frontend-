@@ -4,6 +4,7 @@ import { createClient } from 'pexels';
 // import NavBar from './components/NavBar/NavBar';
 import EmployeesDirectoryPage from './pages/DirectoryPage/EmployeesDirectoryPage';
 import EmployeeEditPage from './pages/EmployeeEditPage/EmployeeEditPage';
+import NewEmployeePage from './pages/NewEmployeePage/NewEmployeePage';
 // require('dotenv').config()
 
 function App() {
@@ -19,12 +20,13 @@ function App() {
       {/* <NavBar user={user} setUser={setUser} /> */}
       <Routes>
         <Route path="/directory" element={<EmployeesDirectoryPage //user = {user}
-          // pexelsClient={pexelsClient} 
-          />} />
-        <Route path="/directory/:view" element={<EmployeesDirectoryPage //user = {user}
-          // pexelsClient={pexelsClient} 
-          />}/>
+        // pexelsClient={pexelsClient} 
+        />} />
+        <Route path='/directory/new' element={<NewEmployeePage />} />
         <Route path="/directory/edit/:id" element={<EmployeeEditPage />} />
+        <Route path="/directory/:view" element={<EmployeesDirectoryPage //user = {user}
+        // pexelsClient={pexelsClient} 
+        />} />
       </Routes>
     </main>
 

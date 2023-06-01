@@ -66,6 +66,48 @@ async function getAll() {
       throw error;
     }
   }
+
+
+  async function deleteEmployee(id) {
+    try {
+      const response = await fetch(`${BASE_URL}/employees/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify("")
+      });
+      if (!response.ok) {
+        throw new Error(`Failed to delete employee ${id}`);
+      }
+      const deletedEmployee = await response.json();
+      return deletedEmployee;
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
   
-  export { getAll, getEmployeeById, updateEmployee };
+  async function createNewEmployee(employee) {
+
+    try {
+      const response = await fetch(`${BASE_URL}/employees`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(employee)
+      });
+      if (!response.ok) {
+        throw new Error(`Failed to create employee ${employee.id}`);
+      }
+      const createdEmployee = await response.json();
+      return createdEmployee;
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
+  
+  export { createNewEmployee, getAll, getEmployeeById, updateEmployee, deleteEmployee };
   

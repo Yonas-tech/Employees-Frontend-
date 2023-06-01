@@ -49,17 +49,7 @@ export default function EmployeesDirectoryPage({ user, setUser, pexelsClient }) 
           <Link to='/directory/locations'>Grouped by Location</Link>
         </menu>
         <div className='view'>
-
             {getView(view)}
-
-          {/* <Routes>
-            <Route path='/employees_view' element= {<Employees employees={employees}
-              pexelsClient={pexelsClient} />}/>
-            <Route path='/departments' element= {<Departments employees={employees}
-              pexelsClient={pexelsClient}/>}/>
-            <Route path='/location' element= {<Locations employees={employees}
-              pexelsClient={pexelsClient}/>}/>
-          </Routes> */}
         </div>
       </div>
     </div>

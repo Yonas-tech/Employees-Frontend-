@@ -1,3 +1,4 @@
+import './style.css'
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import * as employeesAPI from '../../utilities/employees-api';
@@ -55,8 +56,19 @@ export default function EmployeeEditPage() {
     }
   };
 
+  const handleAddressChange = (e) => {
+    const { name, value } = e.target;
+    setEmployee((prevEmployee) => ({
+      ...prevEmployee,
+      address: {
+        ...prevEmployee.address,
+        [name]: value
+      }
+    }));
+  };
+
   return (
-    <div>
+    <div className="form-container">
       <h2>Edit Employee</h2>
       <form onSubmit={handleSubmit}>
         {/* Render form fields based on the employee object */}
@@ -78,7 +90,125 @@ export default function EmployeeEditPage() {
             onChange={handleChange}
           />
         </div>
-        {/* Add more input fields for other employee properties */}
+        <div>
+          <label>Position:</label>
+          <input
+            type="text"
+            name="position"
+            value={employee.position}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>Department:</label>
+          <input
+            type="text"
+            name="department"
+            value={employee.department}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>Location:</label>
+          <input
+            type="text"
+            name="location"
+            value={employee.location}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>Phone:</label>
+          <input
+            type="text"
+            name="phone"
+            value={employee.phone}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            name="Email"
+            value={employee.Email}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>Is On Leave:</label>
+          <input
+            type="checkbox"
+            name="isOnLeave"
+            checked={employee.isOnLeave}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>Image ID:</label>
+          <input
+            type="number"
+            name="imageId"
+            value={employee.imageId}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>Date of Birth:</label>
+          <input
+            type="date"
+            name="dob"
+            value={employee.dob}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>SSN:</label>
+          <input
+            type="text"
+            name="ssn"
+            value={employee.ssn}
+            onChange={handleChange}
+          />
+        </div>
+        <h1>Address: </h1>
+
+        <div>
+          <label>Street:</label>
+          <input
+            type="text"
+            name="street"
+            value={employee.address.street}
+            onChange={handleAddressChange}
+          />
+        </div>
+        <div>
+          <label>City:</label>
+          <input
+            type="text"
+            name="city"
+            value={employee.address.city}
+            onChange={handleAddressChange}
+          />
+        </div>
+        <div>
+          <label>State:</label>
+          <input
+            type="text"
+            name="state"
+            value={employee.address.state}
+            onChange={handleAddressChange}
+          />
+        </div>
+        <div>
+          <label>Country:</label>
+          <input
+            type="text"
+            name="country"
+            value={employee.address.country}
+            onChange={handleAddressChange}
+          />
+        </div>
         <button type="submit">Update</button>
       </form>
     </div>
