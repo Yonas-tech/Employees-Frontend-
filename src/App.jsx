@@ -13,7 +13,8 @@ function App() {
   return (
     <main className="App">
       <EmployeesDirectoryPage //user = {user}
-          pexelsClient={pexelsClient} />
+          // pexelsClient={pexelsClient} 
+          />
 
       {/* <NavBar user={user} setUser={setUser} /> */}
       {/* <Routes>
