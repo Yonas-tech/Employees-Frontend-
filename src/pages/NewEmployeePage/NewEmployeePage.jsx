@@ -212,7 +212,7 @@ export default function NewEmployeePage() {
             onChange={handleAddressChange}
           />
         </div>
-        <button type="submit">Update</button>
+        <button type="submit">Add Employee</button>
       </form>
     </div>
   );
