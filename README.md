@@ -7,7 +7,7 @@
 4. Provide a logout option
 5. Users can be Employees, Managers, or Admins
 6. Employees can only view the directory and edit their own personal profile
-7. Managers and Admins can view, edit, and delete all notes
+7. Managers and Admins can view, edit, and delete employees
 8. Require users to login at least once per a 24 hour period once logged in
 9. Provide a way to remove a user access by only Managers or Admins
 10. Provide a way to remove an employee from directory by Managers or Admins
