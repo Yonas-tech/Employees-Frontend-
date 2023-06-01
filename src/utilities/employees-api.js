@@ -20,7 +20,7 @@ const BASE_URL = 'https://employeesbend.onrender.com/api';
 //   }
 // }
 
-export async function getAll() {
+async function getAll() {
     try {
       const response = await fetch(`${BASE_URL}/employees`)
       const employeesData = await response.json()
@@ -32,3 +32,40 @@ export async function getAll() {
       console.error('Error:', error)
     }
   }
+
+  async function getEmployeeById(id) {
+    try {
+      const response = await fetch(`${BASE_URL}/employees/${id}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch employee');
+      }
+      const employee = await response.json();
+      return employee;
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
+  
+  async function updateEmployee(id, updatedData) {
+    try {
+      const response = await fetch(`${BASE_URL}/employees/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedData)
+      });
+      if (!response.ok) {
+        throw new Error('Failed to update employee');
+      }
+      const employee = await response.json();
+      return employee;
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
+  
+  export { getAll, getEmployeeById, updateEmployee };
+  

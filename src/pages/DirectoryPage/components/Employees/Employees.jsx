@@ -1,68 +1,46 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 
-export default function Employees({ employees, pexelsClient }) {
-  const [employeePhotos, setEmployeePhotos] = useState([]);
+function Employees({ employees }) {
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    if (employees) {
-      fetchEmployeePhotos();
-    }
-  }, [employees]);
+  const handleEditClick = (id) => {
+    navigate(`/directory/edit/${id}`);
+  };
 
-  async function fetchEmployeePhotos() {
-    try {
-      const photos = await Promise.all(
-        employees.map((employee) =>
-          pexelsClient.photos.show({ id: employee.imageId })
-        )
-      );
-      setEmployeePhotos(photos);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  return employees ? (
+  return (
     <div>
       <h2>Employees</h2>
-      <table className="employee-table">
+      <table>
         <thead>
           <tr>
             <th>Name</th>
-            <th>Photo</th>
+            {/* <th>Photo</th> */}
             <th>Title</th>
             <th>Email Address</th>
             <th>Department</th>
             <th>Location</th>
+            <th>Actions</th>
           </tr>
         </thead>
-
         <tbody>
-          {employees.map((employee, index) => {
-            const photo = employeePhotos[index];
-            return (
-              <tr key={index}>
-                <td>{employee.firstName + ' ' + employee.lastName}</td>
-                <td className='photo-cell'>
-                  {photo ? (
-                    <img src={photo.src.small} alt="Employee Photo" />
-                  ) : (
-                    'Photo Loading...'
-                  )}
-                </td>
-                <td>{employee.position}</td>
-                <td>{employee.Email}</td>
-                <td>{employee.department}</td>
-                <td>{employee.location}</td>
-              </tr>
-            );
-          })}
+          {employees.map((employee) => (
+            <tr key={employee.id}>
+              <td>{employee.firstName + ' ' + employee.lastName}</td>
+              {/* <td>{employee.photo}</td> */}
+              <td>{employee.position}</td>
+              <td>{employee.email}</td>
+              <td>{employee.department}</td>
+              <td>{employee.location}</td>
+              {/* <td>
+                <button onClick={() => handleEditClick(employee.id)}>Edit</button>
+              </td> */}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
-  ) : (
-    <div>
-      <h3>Loading...</h3>
-    </div>
   );
 }
+
+export default Employees;

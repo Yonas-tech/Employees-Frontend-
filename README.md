@@ -1,71 +1,38 @@
-# Getting Started with Create React App
+# Employees Directory
+# User Story: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. A public facing/landing page with login and/or registering/signing up options
+2. Provide different dashboard page after login based on user status: employee, manager and/or admin
+3. Display current user and assigned role on the top
+4. Provide a logout option
+5. Users can be Employees, Managers, or Admins
+6. Employees can only view the directory and edit their own personal profile
+7. Managers and Admins can view, edit, and delete all notes
+8. Require users to login at least once per a 24 hour period once logged in
+9. Provide a way to remove a user access by only Managers or Admins
+10. Provide a way to remove an employee from directory by Managers or Admins
+11. Only Managers and Admins can create new employee entry
 
-## Available Scripts
+# Under Development ...
 
-In the project directory, you can run:
+The Employees Directory at the current stage allows users to view and manage employee information. It provides features such as listing employees, grouping them by department or location, and displaying their details.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React: A JavaScript library for building user interfaces.
+- React Router: A routing library for React applications.
+- MongoDB: A NoSQL database for storing employee data.
+- Express.js: A web application framework for Node.js used for handling API requests.
+- Mongoose: An object data modeling (ODM) library for MongoDB and Node.js.
+- Pexels API: An API for retrieving employee photos.
+- Postman: An API Platform to design, build, test and iterate APIs.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+- Home Page: The home page displays a menu with links to different views: Employees, Grouped by Department, and Grouped by Location.
+- Employees View: This view displays a table with all the employees, including their names, photos, titles, email addresses, departments, and locations.
+- Grouped by Department: This view groups the employees by their departments and displays them in separate sections.
+- Grouped by Location: This view groups the employees by their locations and displays them in separate sections or tables.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Employees-Frontend-

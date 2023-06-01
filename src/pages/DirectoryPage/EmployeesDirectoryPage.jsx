@@ -29,22 +29,22 @@ export default function EmployeesDirectoryPage({ user, setUser, pexelsClient }) 
       <h1>Employees Directory Page</h1>
       <div className="flex-container">
         <menu className="menu">
-          <Link to="/employees_view">Employees</Link>
-          <Link to="/departments">Grouped by Department</Link>
-          <Link to="/location">Grouped by Location</Link>
+          <Link to="/directory/employees">Employees</Link>
+          <Link to="/directory/by/departments">Grouped by Department</Link>
+          <Link to="/directory/by/location">Grouped by Location</Link>
         </menu>
         <div className="view">
           <Routes>
             <Route
-              path="/employees_view"
+              path="/directory/employees"
               element={<Employees employees={employees} pexelsClient={pexelsClient} />}
             />
             <Route
-              path="/departments"
+              path="/directory/by/departments"
               element={<Departments employees={employees} pexelsClient={pexelsClient} />}
             />
             <Route
-              path="/location"
+              path="/directory/by/location"
               element={<Locations employees={employees} pexelsClient={pexelsClient} />}
             />
           </Routes>
