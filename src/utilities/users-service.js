@@ -26,7 +26,11 @@ export function getToken() {
   if (!token) return null;
   // Obtain the payload of the token
   // console.log(JSON.parse(token))
+  
   const payload = JSON.parse(atob(token.split('.')[1]));
+  // const payload = JSON.parse(atob(token.split('.')[1]));
+
+
   // A JWT's exp is expressed in seconds, not milliseconds, so convert
   if (payload.exp < Date.now() / 1000) {
     // Token has expired - remove it from localStorage
@@ -41,6 +45,18 @@ export function getUser() {
   // If there's a token, return the user in the payload, otherwise return null
   return token ? JSON.parse(atob(token.split('.')[1])).user : null;
 }
+
+
+// export function getEmployees() {
+//   const token = getToken();
+//   // If there's a token, return the user in the payload, otherwise return null
+//   return token ? JSON.parse(atob(token.split('.')[1])).user : null;
+// }
+
+
+
+
+
 
 export function logOut() {
   localStorage.removeItem('token');

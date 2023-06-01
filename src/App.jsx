@@ -13,35 +13,29 @@ import UserDashboardPage from './pages/UserDashboard/UserDashboardPage';
 import UsersPage from './pages/UsersPage/UsersPage';
 import UserEditPage from './pages/UserEditPage/UserEditPage';
 import EmployeeEditPage from './pages/EmployeeEditPage/EmployeeEditPage';
-import employeesData from './mock_data/mock_employees_data';
+// import employeesData from './mock_data/mock_employees_data';
 import './env'
 
 
-// import { getUser } from './utilities/users-service';
+import { getUser, getEmployees } from './utilities/users-service';
 // import { getAdmin } from './utilities/admin-service';
 
 
 function App() {
 
   // const [user, setUser] = useState(getUser());
-  // const [admin, setAdmin] = useState(getAdmin());
 
+  // const [admin, setAdmin] = useState(getAdmin());
   const pexelsClient = createClient(window.env.pexels_api_key);
 
-  const [employeesMockData, setData] = useState([])
-
-  useEffect(()=>{
-    console.log(employeesMockData[1])
-  }, employeesMockData)
-  
-  useEffect(()=>{
-    setData(employeesData)
-  },[])
-
-  
   return (
     <main className="App">
-      <EmployeesDirectoryPage employeesData={employeesMockData} pexelsClient={pexelsClient}/>
+      <EmployeesDirectoryPage //user = {user}
+                              //setUser = {setUser}
+                              pexelsClient={pexelsClient}/>
+
+
+
 
 
       {/* {user ?

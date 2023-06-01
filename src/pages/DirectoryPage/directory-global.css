@@ -1,0 +1,38 @@
+/* Directory Global styles */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .page-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .flex-container {
+    display: flex;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .menu a:hover {
+    background-color: #eee;
+  }
+  
+  .view {
+    flex-grow: 1;
+  }
+  

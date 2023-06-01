@@ -1,0 +1,28 @@
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .employee-table th,
+  .employee-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .employee-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .employee-table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .employee-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .employee-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  
