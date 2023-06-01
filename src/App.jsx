@@ -4,11 +4,11 @@ import { createClient } from 'pexels';
 // import NavBar from './components/NavBar/NavBar';
 import EmployeesDirectoryPage from './pages/DirectoryPage/EmployeesDirectoryPage';
 import EmployeeEditPage from './pages/EmployeeEditPage/EmployeeEditPage';
-import './env'
+require('dotenv').config()
 
 function App() {
 
-  const pexelsClient = createClient(window.env.pexels_api_key);
+  const pexelsClient = createClient(process.env.pexels_api_key);
 
   return (
     <main className="App">
