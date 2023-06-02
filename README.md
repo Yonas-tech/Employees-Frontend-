@@ -25,7 +25,7 @@ The Employees Directory at the current stage allows users to view and manage emp
 - Express.js: A web application framework for Node.js used for handling API requests.
 - Mongoose: An object data modeling (ODM) library for MongoDB and Node.js.
 - Pexels API: An API for retrieving employee photos.
-- Postman: An API Platform to design, build, test and iterate APIs.
+- Postman: An API design, build, test and iterate Platform to test the backend.
 
 ## Usage
 
@@ -37,5 +37,14 @@ The Employees Directory at the current stage allows users to view and manage emp
 
 ## Resources: 
 
-- 
+- https://mongoosejs.com/
+- https://react.dev
+- https://developer.mozilla.org/en-US/
+- https://www.postman.com 
+
+## Reference
+- Backend Loogging and Error Handling: Dave Gray's Youtube Turorial at [here](https://www.youtube.com/watch?v=CvCiNeLnZ00&t=11518s)
+
+
+
 
