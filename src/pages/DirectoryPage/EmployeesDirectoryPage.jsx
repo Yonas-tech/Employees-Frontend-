@@ -26,6 +26,7 @@ export default function EmployeesDirectoryPage({ user, setUser, pexelsClient }) 
 
   const {view} = useParams();
   function getView(view){
+    try{
     if (view==='employees'){
       return <Employees employees={employees}/>
     }
@@ -39,6 +40,13 @@ export default function EmployeesDirectoryPage({ user, setUser, pexelsClient }) 
     }
     else{
       return <Employees employees={employees}/>
+    }}
+    catch (err) {
+      return(
+      <div>
+        {err.message}
+      </div>
+      )
     }
   }
 

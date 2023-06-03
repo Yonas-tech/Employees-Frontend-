@@ -43,7 +43,7 @@ The Employees Directory at the current stage allows users to view and manage emp
 - https://www.postman.com 
 
 ## Reference
-- Backend Loogging and Error Handling: Dave Gray's Youtube Turorial at [here](https://www.youtube.com/watch?v=CvCiNeLnZ00&t=11518s)
+- Backend Loogging and Error Handling: Dave Gray's Youtube Tutorial at [here](https://www.youtube.com/watch?v=CvCiNeLnZ00&t=11518s)
 
 
 
